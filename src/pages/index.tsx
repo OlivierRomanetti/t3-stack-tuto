@@ -1,13 +1,11 @@
 import Head from "next/head";
 
-import { SignInButton, SignOutButton, useUser } from "@clerk/nextjs";
+import { SignInButton, useUser } from "@clerk/nextjs";
 
 import { api } from "~/utils/api";
 
 const CreatePostWizard = () => {
   const { user } = useUser();
-
-  console.log(user);
 
   if (!user) {
     return null;
